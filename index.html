@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .box {
+            width: 10px;
+            height: 10px;
+            background-color: orange;
+           
+            /* margin: 1px; */
+            /* transition: background-color 0.3s, transform 0.3s; /* Smooth transition  */
+        }
+        .box:hover {
+            background-color: red; /* Change color on hover */
+            width: 10px;
+            height: 10px;
+            transform: scale(1.5); /* Scale up on hover */}
+        .colum{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            width: 100vw; /* Adjusted for the correct width */
+            height: 100vh; /* Adjust for the correct height */
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .far{
+            margin-left: 10px;
+        }
+        .magic {
+            margin-left: 20px;
+        }
+        .line {
+            cursor: pointer;
+            display :flex;
+            justify-content: space-between;
+            padding: 30px;
+
+        }
+        .line div {
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .line div:hover {
+            background-color: #ddd; /* Màu nền sáng khi hover */}
+        .end {
+            cursor: pointer;
+          display :flex;
+           justify-content: flex-end;
+           gap: 20px;
+           padding: 0px 30px;
+        }
+        .end div:hover {
+            border-bottom: 2px solid black; /* Thêm gạch chân khi hover */}
+        .con{
+            margin-top: 50px;
+            display :flex;
+            flex-wrap: wrap;
+            /* height: 100px;
+            width: 100px; */
+            gap: 10px;
+            justify-content: between;
+            padding:0 30px;
+        }
+        .con > div {
+            flex: 1 1 calc(33.333% - 20px); /* 3 ảnh mỗi dòng, trừ đi khoảng cách giữa các ảnh */
+            box-sizing: border-box;
+        }
+        .con > div img {
+            width: 100%;
+            height: 100%;
+        }
+        .centre{
+            display:flex;
+            margin-top: 100px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            /* justify-content: center;
+            align-content: center; */
+            text-align: center;
+        }
+        .fix {
+            display: flex;
+            justify-content: space-between; /* Căn đều các ảnh theo chiều ngang */
+            gap: 10px; /* Khoảng cách giữa các ảnh */
+        }
+        .fix > div {
+            flex: 1; /* Đảm bảo mỗi ảnh chiếm khoảng không gian bằng nhau */
+            max-width: calc(100% / 6 - 10px); /* Chia đều không gian cho 6 ảnh và trừ khoảng cách giữa các ảnh */
+        }
+        .fix > div img {
+            width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+            height: auto; /* Đảm bảo ảnh giữ tỉ lệ gốc */
+        }
+        .font{
+            font-family: 'Inconsolata', monospace;
+        }
+    </style>
+    <title>Chữ HIT bằng box</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Chữ H -->
+         <div class="colum"><div class="box"></div>
+         <div class="box"></div>
+         <div class="box "></div>
+         <div class="box "></div>
+          <div class="box"></div></div>
+          <div class="colum"><div class="box hidden"></div>
+          <div class="box hidden"></div>
+          <div class="box "></div>
+          <div class="box hidden"></div>
+           <div class="box hidden"></div></div>
+           <div class="colum"><div class="box"></div>
+           <div class="box"></div>
+           <div class="box "></div>
+           <div class="box "></div>
+            <div class="box"></div></div>
+            <!-- chữ I -->
+            <div class="colum far"><div class="box"></div>
+            <div class="box"></div>
+            <div class="box "></div>
+            <div class="box "></div>
+             <div class="box"></div></div>
+             <!-- Chữ T -->
+             <div class="colum far"><div class="box"></div>
+             <div class="box hidden"></div>
+             <div class="box hidden"></div>
+             <div class="box hidden"></div>
+              <div class="box hidden"></div></div>
+              <div class="colum"><div class="box"></div>
+         <div class="box"></div>
+         <div class="box "></div>
+         <div class="box "></div>
+          <div class="box"></div></div>
+          <div class="colum "><div class="box"></div>
+          <div class="box hidden"></div>
+          <div class="box hidden"></div>
+          <div class="box hidden"></div>
+           <div class="box hidden"></div></div>
+           <div class="colum magic"><div class="box"></div>
+         <div class="box"></div>
+         <div class="box "></div>
+         <div class="box "></div>
+          <div class="box"></div></div>
+          <div class="colum far"><div class="box"></div>
+          <div class="box"></div>
+          <div class="box "></div>
+          <div class="box hidden"></div>
+           <div class="box hidden"></div></div>
+           <div class="colum"><div class="box hidden"></div>
+         <div class="box hidden"></div>
+         <div class="box "></div>
+         <div class="box hidden"></div>
+          <div class="box hidden"></div></div>
+          <div class="colum"><div class="box"></div>
+         <div class="box"></div>
+         <div class="box "></div>
+         <div class="box "></div>
+          <div class="box"></div></div>
+       
+    </div>
+    <div class="line font"><div >MyPortfolio</div>
+    <div><i class="fa fa-align-justify" aria-hidden="true"></i></div></div>
+   <div >Hey, I'm Johan Stanworth'</div>
+   <div class="end font" ><div>All</div>
+   <div>Web</div>
+   <div>Design</div>
+   <div>Branding</div>
+   <div>Photography</div></div>
+   <div>Freelance Creative & Professional Graphics Designer</div>
+<div></div>
+<!-- bai 2 -->
+
+
+<div class="con font">
+    <div><img src="anh_1.jpg" alt="" ></div>
+<div><img src="anh2.jpg" alt=""></div>
+<div><img src="anh3.jpg" alt=""></div>
+<div><img src="anh4.jpg" alt=""></div>
+<div><img src="anh5.jpg" alt=""></div>
+<div><img src="anh6.jpg" alt=""></div>
+</div>
+
+<div class="centre">
+ 
+    <div><b> My Clients</b></div>
+    <div>Lorem ipsum dolor sit anet consectetur adipisicing elit</div>
+    <div>explicabo iventorem</div>
+</div>
+ <div class="fix">
+    <div><img src="anh7.jpg" alt=""></div>
+    <div><img src="anh8.jpg" alt=""></div>
+    <div><img src="anh9.jpg" alt=""></div>
+    <div><img src="anh10.jpg" alt=""></div>
+    <div><img src="anh11.jpg" alt=""></div>
+    <div><img src="anh12.jpg" alt=""></div>
+ </div>
+</body>
+</html>
